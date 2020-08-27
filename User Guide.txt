@@ -1,0 +1,15 @@
+PACKAGE REQUIRED
+--------------------------
+1. Django
+2. Numpy
+3. Tensor Flow
+4. Keras
+5. Pickle
+
+
+RUNNING THE APPLICATION
+--------------------------
+1. Open the terminal
+2. Change the directory to directory where the app exist
+3. Write "python manage.py runserver"
+4. Go to the IP link provided (127.0.0.1:8000)

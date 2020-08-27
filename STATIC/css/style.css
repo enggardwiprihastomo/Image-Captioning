@@ -1,0 +1,208 @@
+*{
+    font-size: 14px;
+    font-family: 'Lao UI';
+    color: #96989A;
+}
+
+body{
+    margin: 0px;
+    width: 100%;
+}
+
+.header{
+    height: 60px;
+    width: calc(100% - 40px);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.header img{
+    height: 50px;
+    margin-right: 5px;
+}
+
+.title1{
+    font-size: 40px;
+    font-family: 'Sunshine Boulevard Personal Use';
+    margin-right: 5px;
+}
+
+.title2{
+    font-size: 18px;
+    font-family: 'Sunshine Boulevard Personal Use';
+}
+
+.sidebar{
+    height: 534px;
+    width: 330px;
+    padding: 10px;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 10px 5px 8px -2px #dddddd;
+    float: left;
+}
+
+.btn-upload{
+    position: absolute;
+    bottom: 20px;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 5px 5px 8px 0px #dddddd;
+}
+
+.btn-upload label{
+    height: 80%;
+    width: 80%;
+    background-image: url('../img/upload.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    transition: 0.25s all;
+}
+
+.btn-upload:hover label{
+    transform: rotate(-10deg);
+}
+
+.btn-upload input[type="file"]{
+    display: none;
+}
+
+.imgwrapper{
+    height: 150px;
+    width: 230px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.25s all;
+    margin: 10px auto;
+    position: relative;
+}
+
+.noimg{
+    height: 220px;
+    width: 300px;
+    background-image: url('../img/multiimg.png');
+    background-size: auto 65%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.imgblind{
+    height: 220px;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    transform: scaleY(0);
+	transform-origin: center bottom;
+    transition: 0.25s all;
+    transition-delay: 0.3s;
+}
+
+.gradienttext{
+    background: -webkit-linear-gradient(#1A78B8, #F9D328);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.imgblind .btn-process{
+    height: 50px;
+    width: 120px;
+    background-color: white;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    cursor: pointer;
+    transition: 0.5s all;
+    transition-delay: 0.6s;
+}
+
+.imgwrapper:hover{
+    height: 220px;
+    width: 300px;
+}
+
+.imgwrapper:hover .imgblind{
+    transform: scaleY(1);
+}
+
+.imgwrapper:hover .btn-process{
+    opacity: 1;
+}
+
+.imgwrapper img{
+    height: 100%;
+    width: 100%;
+}
+
+.content{
+    height: 554px;
+    width: calc(100% - 350px);
+    float: left;
+}
+
+.displayimg{
+    height: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: red; */
+}
+
+.displaycapt{
+    margin-left: 50px;
+    margin-right: 50px;
+    height: calc(15% - 22px);
+    width: calc(100% - 100px);
+    border-top: 2px solid #E6E7E8;
+    position: relative;
+    padding-top: 20px;
+}
+
+.titlecapt{
+    background-color: #E6E7E8;
+    height: 30px;
+    width: 150px;
+    position: absolute;
+    top: -15px;
+    left: calc(50% - 72px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainimg{
+    height: 400px;
+    width: 560px;
+}
+
+.nomainimg{
+    height: 400px;
+    width: 560px;
+    background-image: url('../img/img.png');
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.mainimg img{
+    height: 100%;
+    width: 100%;
+}

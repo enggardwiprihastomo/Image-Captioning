@@ -1,0 +1,46 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Image Captioning</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="icon" href="{% static 'img/logo.png' %}">
+</head>
+<body>
+    <input type="hidden" class="filename">
+    {% csrf_token %}
+    <div class="header">
+        <img src="{% static 'img/logo.png' %}" alt="">
+        <span class="title">
+            <span class="title1">image</span><span class="title2">captioning</span>
+        </span>
+    </div>
+    <div class="sidebar">
+        <div class="imgcontentwrapper">
+            <div class="noimg"></div>
+        </div>
+        <div class="btn-upload">
+            <label><input type="file" accept="image/*" name="trainingimgs" multiple></label>
+        </div>
+    </div>
+    <div class="content">
+        <div class="displayimg">
+            <div class="mainimgwrapper">
+                <div class="nomainimg"></div>
+            </div>
+        </div>
+        <div class="displaycapt">
+            <span class="titlecapt">
+                CAPTION
+            </span>
+            <span class="captionobtained"></span>
+        </div>
+    </div>
+</body>
+</html>
+<script src="{% static 'js/Jquery.js' %}"></script>
+<script src="{% static 'js/UIController.js' %}"></script>
+<script src="{% static 'js/MainController.js' %}"></script>
